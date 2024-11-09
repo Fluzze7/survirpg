@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 
 var SPEED = 150
+
 var player_state
 
 func _physics_process(delta):
@@ -14,9 +15,9 @@ func _physics_process(delta):
 		
 	velocity = direction * SPEED
 	move_and_slide()
-	play_animation(direction)
+	play_animation()
 
-func play_animation(dir):
+func play_animation():
 	if player_state == "idle":
 		$AnimatedSprite2D.play("idle")
 		
