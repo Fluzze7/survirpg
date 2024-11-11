@@ -5,6 +5,9 @@ var SPEED = 150
 
 var player_state
 
+@export var inv: Inventory
+
+@warning_ignore("unused_parameter")
 func _physics_process(delta):
 	var direction = Input.get_vector("left","right","up","down")
 	
@@ -40,5 +43,6 @@ func play_animation():
 			[-106,-106]:
 				$AnimatedSprite2D.play("nw-walk")
 		
-		
+func collect(item):
+	inv.insert(item)
 		

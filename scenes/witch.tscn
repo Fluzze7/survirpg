@@ -1,5 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://toeqrpubqn78"]
+[gd_scene load_steps=19 format=3 uid="uid://toeqrpubqn78"]
 
+[ext_resource type="Script" path="res://scenes/witch.gd" id="1_la7h8"]
 [ext_resource type="Texture2D" uid="uid://bwsycryxdnpcj" path="res://assets/mini_fantasy_sprites_oga_ver.png" id="1_tetc7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fyj83"]
@@ -123,10 +124,13 @@ radius = 8.0
 height = 24.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_la7h8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0y4kf")
 animation = &"atack"
+frame = 3
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6)
